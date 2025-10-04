@@ -41,13 +41,15 @@
             height: 500px;
             background-color: red;
             position: relative;
-            
+
         }
 
         #float img {
-            float: left;           /* or float: left */
-  margin: 0 0 10px 10px;  /* space between image and text */
-  width: 200px;
+            float: left;
+            /* or float: left */
+            margin: 0 0 10px 10px;
+            /* space between image and text */
+            width: 200px;
         }
 
         #H1 {
@@ -90,6 +92,44 @@
         #main2 h4~span {
             color: green;
             text-shadow: 0.3px 0.3px 6px red;
+        }
+
+        .wrap div {
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            gap: 10px;
+
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .item2 {
+            grid-column: 1 / span 2;
+        }
+        .transition{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition-duration:4s;
+            transition-delay: 0s;
+            transition-timing-function: ease;
+        }
+        .transition:hover{
+            width: 400px;
         }
     </style>
     <link rel="stylesheet" href="index.css">
@@ -189,7 +229,7 @@
 
     <!-- float --> used for fix image in which place we want and other lement keep maintain the screen like news paper
     float:right,left,bottom,top
-    <div id="float">
+    <div id="float" style="overflow:hidden ;">
         <img src="./image.png" alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam quas, sunt eius mollitia aut culpa
             maiores quasi consequuntur commodi pariatur earum, ea voluptatibus nisi rerum praesentium blanditiis
@@ -198,17 +238,134 @@
             neque voluptatem, ullam vero iusto possimus dolorem eaque sapiente reprehenderit vel dolorum sequi corporis
             ducimus officiis illum quidem odio rem nisi voluptatibus quia! Odit debitis amet aut animi quos excepturi
             dolorem omnis, accusamus at ea magnam labore eaque architecto magni rem alias et rerum veritatis molestiae
-            doloremque exercitationem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quas, qui veritatis tempore fugit saepe debitis libero totam quaerat optio! Sed similique dolore dolor accusantium voluptatem porro, pariatur recusandae eum, voluptatum eaque quod iure quo fugit ducimus autem eos tempora enim quasi ea incidunt sunt quisquam. Ab quasi eligendi earum impedit quaerat quae quas harum inventore, ad illum dignissimos doloribus sapiente aliquam iusto magni laboriosam amet minima! Dolore pariatur rem, perspiciatis vero sint molestiae quas quaerat velit? Aliquam consequuntur rerum optio laudantium at atque ipsum nulla ut tempore. Omnis aut officiis maiores laudantium odit? Nulla maxime eaque laudantium, pariatur, sit accusantium ut corrupti atque illo aliquam amet aspernatur suscipit placeat velit eos dignissimos labore nemo sapiente autem enim ea deleniti veniam nobis! Exercitationem molestiae neque dicta et eius ipsam esse ea. Aperiam tempore atque repudiandae, reiciendis inventore veniam at ratione officia cumque. Eveniet ex molestias vel officia sapiente quia odio deleniti officiis, quod exercitationem labore modi magnam quisquam placeat, non quasi nostrum eligendi itaque maxime perferendis repellendus quidem vero ea? Ullam tempora iste, ad cupiditate rem vel magni debitis optio culpa quibusdam amet eius eligendi molestias at excepturi? Adipisci libero optio voluptatem officia perferendis impedit odit aliquam, officiis porro aut eligendi vel totam velit ab. Veniam dignissimos aliquid nesciunt? Illo id ab nam deleniti atque a odit iste voluptatum sed exercitationem corporis nisi molestiae porro nostrum natus quidem maxime explicabo saepe, deserunt quaerat magnam modi nobis eos quibusdam. Ex facere accusamus in, libero dolorem vero commodi magni tempora at, impedit enim, itaque excepturi soluta fugiat. Pariatur voluptate illum, minus quod, nihil praesentium aut ratione libero earum ea, excepturi dicta qui porro provident iure ullam odio. Cum voluptatem deserunt aut asperiores tempora itaque distinctio obcaecati iusto explicabo accusantium laudantium incidunt, illo omnis rem qui iste eius, placeat totam minus sequi amet vero voluptatum delectus fuga? Aperiam dicta ratione animi aut suscipit illum cum magni facere, blanditiis repellendus dolor sapiente eos nam hic ullam cupiditate aliquam temporibus maxime! Praesentium quia accusamus necessitatibus dolorum eos quas accusantium aperiam. Error maiores doloremque dolorem a soluta, unde iste quidem enim recusandae aliquid vero! Sunt eaque soluta, pariatur labore doloribus, consequuntur dolor consequatur mollitia adipisci sed inventore in sapiente amet fuga assumenda repellendus, totam magnam modi minima minus nihil reprehenderit ad! Optio, ut. Voluptatum harum sequi accusantium eum dicta architecto voluptatibus, ipsa iusto non, ad natus blanditiis magni vel accusamus exercitationem quod ipsam voluptatem nihil quo eos vero ipsum dignissimos minima alias. Vel numquam rerum laboriosam repellat accusantium, ut consequuntur reiciendis voluptates voluptate tenetur molestias magni est eligendi quod, eum aliquid doloribus qui quam blanditiis saepe aliquam corporis ea tempore. Voluptatum, quibusdam a, doloremque placeat soluta deserunt tenetur blanditiis accusamus explicabo totam porro, excepturi repellat inventore!</p>
+            doloremque exercitationem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quas, qui
+            veritatis tempore fugit saepe debitis libero totam quaerat optio! Sed similique dolore dolor accusantium
+            voluptatem porro, pariatur recusandae eum, voluptatum eaque quod iure quo fugit ducimus autem eos tempora
+            enim quasi ea incidunt sunt quisquam. Ab quasi eligendi earum impedit quaerat quae quas harum inventore, ad
+            illum dignissimos doloribus sapiente aliquam iusto magni laboriosam amet minima! Dolore pariatur rem,
+            perspiciatis vero sint molestiae quas quaerat velit? Aliquam consequuntur rerum optio laudantium at atque
+            ipsum nulla ut tempore. Omnis aut officiis maiores laudantium odit? Nulla maxime eaque laudantium, pariatur,
+            sit accusantium ut corrupti atque illo aliquam amet aspernatur suscipit placeat velit eos dignissimos labore
+            nemo sapiente autem enim ea deleniti veniam nobis! Exercitationem molestiae neque dicta et eius ipsam esse
+            ea. Aperiam tempore atque repudiandae, reiciendis inventore veniam at ratione officia cumque. Eveniet ex
+            molestias vel officia sapiente quia odio deleniti officiis, quod exercitationem labore modi magnam quisquam
+            placeat, non quasi nostrum eligendi itaque maxime perferendis repellendus quidem vero ea? Ullam tempora
+            iste, ad cupiditate rem vel magni debitis optio culpa quibusdam amet eius eligendi molestias at excepturi?
+            Adipisci libero optio voluptatem officia perferendis impedit odit aliquam, officiis porro aut eligendi vel
+            totam velit ab. Veniam dignissimos aliquid nesciunt? Illo id ab nam deleniti atque a odit iste voluptatum
+            sed exercitationem corporis nisi molestiae porro nostrum natus quidem maxime explicabo saepe, deserunt
+            quaerat magnam modi nobis eos quibusdam. Ex facere accusamus in, libero dolorem vero commodi magni tempora
+            at, impedit enim, itaque excepturi soluta fugiat. Pariatur voluptate illum, minus quod, nihil praesentium
+            aut ratione libero earum ea, excepturi dicta qui porro provident iure ullam odio. Cum voluptatem deserunt
+            aut asperiores tempora itaque distinctio obcaecati iusto explicabo accusantium laudantium incidunt, illo
+            omnis rem qui iste eius, placeat totam minus sequi amet vero voluptatum delectus fuga? Aperiam dicta ratione
+            animi aut suscipit illum cum magni facere, blanditiis repellendus dolor sapiente eos nam hic ullam
+            cupiditate aliquam temporibus maxime! Praesentium quia accusamus necessitatibus dolorum eos quas accusantium
+            aperiam. Error maiores doloremque dolorem a soluta, unde iste quidem enim recusandae aliquid vero! Sunt
+            eaque soluta, pariatur labore doloribus, consequuntur dolor consequatur mollitia adipisci sed inventore in
+            sapiente amet fuga assumenda repellendus, totam magnam modi minima minus nihil reprehenderit ad! Optio, ut.
+            Voluptatum harum sequi accusantium eum dicta architecto voluptatibus, ipsa iusto non, ad natus blanditiis
+            magni vel accusamus exercitationem quod ipsam voluptatem nihil quo eos vero ipsum dignissimos minima alias.
+            Vel numquam rerum laboriosam repellat accusantium, ut consequuntur reiciendis voluptates voluptate tenetur
+            molestias magni est eligendi quod, eum aliquid doloribus qui quam blanditiis saepe aliquam corporis ea
+            tempore. Voluptatum, quibusdam a, doloremque placeat soluta deserunt tenetur blanditiis accusamus explicabo
+            totam porro, excepturi repellat inventore!</p>
     </div>
 
+
+    <!-- day 4 -->
     <!-- position -->
-     static-we cant able to move items in any position,
-     relative-content moves from actual position,
+    static-we cant able to move items in any position,
+    relative-Relative positioning moves an element RELATIVE to its original position.,
     absolute-its takes screen space
     z-index-position
     fixed-fixed content
     sticky
+    <br>
+    <br>
+    <br>
 
+    <!-- overflow -->
+    <div style="height: 200px;width: 500px;background-color: green;overflow-y: hidden;position: relative;">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium culpa, eaque magni, ducimus
+            ipsam tenetur laudantium odio enim dolores molestias dolor aperiam cum deserunt, iusto doloremque! Odio,
+            facere sint. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio natus beatae doloremque
+            incidunt quo asperiores quisquam libero recusandae quam magni. Explicabo, dolor minus sunt, ratione non,
+            alias culpa similique earum veniam sed assumenda? Suscipit, minima doloribus. Tempora doloremque quasi
+            nesciunt dicta ducimus velit repellat, quia eius voluptate animi. Ut nobis sint natus alias. Cum, obcaecati
+            quae ipsam in velit dolores dignissimos similique officiis autem voluptatum excepturi quas hic impedit
+            libero doloribus? Sed eius provident obcaecati omnis perferendis totam velit? Quas, necessitatibus. Vero a
+            r sit amet consectetur adipisicing elit. Possimus qui pariatur fugit ipsam exercitationem quia at nihil,
+            aspernatur placeat inventore doloribus incidunt enim dolore ipsa quaerat, quis ex illum hic.</p>
+    </div>
+
+    <!-- opacity -->
+    <div style="width: fit-content; height: 100px;background-color: red;">
+        <p style="opacity:1;">The opacity property accepts a numerical value between 0 and 1</p>
+    </div>
+
+    <!-- display flex -->
+    1.flex, 2.grid
+
+    <div
+        style="display: flex;width: 500px;height: 300px;background-color: yellow;justify-content: center;align-items: center;">
+        <h4>flex</h4>
+        <h4>justify content</h4>
+        <h4>align items</h4>
+    </div>
+    <br>
+    <!-- flex direction -->
+    <!-- gap -->
+    <div
+        style="display: flex;width: 500px;height: 300px;background-color: yellow;flex-direction: row-reverse;gap: 10px;">
+        <h4>day1</h4>
+        <h4>day2</h4>
+        <h4>day3</h4>
+    </div><br>
+    <!-- fle wrap -->
+    <div class="wrap" style="display: flex;width: 300px;height: 200px;background-color: yellow;flex-wrap:wrap ;">
+        <div>day1</div>
+        <div>day2</div>
+        <div>day3</div>
+        <div>day4</div>
+        <div>day5</div>
+        <div>day6</div>
+        <div>day7</div>
+        <div>day7</div>
+    </div>
+    <br>
+    <!-- flex grow -->numerical value
+    <div class="wrap" style="display: flex;width: 500px;height: 200px;background-color: yellow;">
+        <div style="background-color: blueviolet;flex-grow: 2;">day1</div>
+        <div style="background-color: rgb(43, 226, 137);flex-grow: 3;flex-basis: 20px;">day2</div>
+        <div style="background-color: rgb(165, 226, 43);flex-grow: 1;">day3</div>
+        <div style="background-color: blueviolet;flex-grow: 1">day4</div>
+    </div>
+    <br>
+    <!-- day 5 -->
+    <!-- grid -->
+    <!-- grid-template-columns: repeat(2,1fr) -->
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+    </div>
+
+    <!-- transition-timing function -->
+    1.transition-duration,
+    2.transition-delay,
+    3.transition-timing-function
+    4.transition-property
+
+    <!-- 1.transition-duration, -->
+    1.linear, 2.ease-slow:fast:slow 3.ease in :slow-fast 4.ease out:fast-slwo 5.ease-in-out :slow-fast-slow
+
+<div class="transition"></div>
 </body>
 
 </html>
