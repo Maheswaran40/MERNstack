@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         /* GROUPING */
         h1,
@@ -25,6 +28,10 @@
         } */
 
         /* ID */
+        :root {
+            --themecolor: rgb(85, 255, 0);
+        }
+
         #image {
             height: 500px;
             width: 100%;
@@ -120,22 +127,63 @@
         .item2 {
             grid-column: 1 / span 2;
         }
-        .transition{
+
+        .transition {
             width: 100px;
             height: 100px;
             background-color: green;
-            transition-duration:4s;
-            transition-delay: 0s;
-            transition-timing-function: ease;
+            /* transition-property: width  !important; */
+            /* transition-duration: 1s; */
+            /* transition-timing-function: ease; */
+            /* transition-delay: 2s; */
         }
-        .transition:hover{
+
+        .transition:hover {
             width: 400px;
+            transform: scale(1.1);
+            background-color: red;
+
+        }
+
+        .animation {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url(./image.png);
+            border: 2px solid var(--themecolor);
+            background-size: cover;
+            background-position: center;
+            animation-name: rotate;
+            animation-duration: 3s;
+            /* how long one spin takes */
+            animation-iteration-count: infinite;
+            /* repeat forever */
+            animation-timing-function: linear;
+            /* constant speed */
+            animation-delay: 1s;
+            animation-direction: alternate;
+            /* wait before starting */
+            /* IN ONE LINE */
+            /* shorthand: animation-name | duration | timing-function | iteration-count | delay | direction */
+            /* animation: rotate 2s linear infinite 1s reverse; */
+
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
     </style>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <!-- ****************************************************day 1**************************************************** -->
     <div>
         <!-- types of css -->
         <!-- 1.inline,internal,external -->
@@ -174,7 +222,7 @@
         <h1 id="placeholder">placeholder</h1>
 
     </div>
-    <!-- day 2 -->
+    <!-- ****************************************************day 2**************************************************** -->
     <!-- combinators -->
     ">"child combinator takes only direct child,
     "+" adjecent sibling combinator takes only next sibling
@@ -210,7 +258,7 @@
     5.letter word-spacing, 6.line-height: 3-line or 30px
     6.text-shadow {horizontal,vertical,blur,color}
 
-    <!-- day 3 -->
+    <!-- ****************************************************day 3**************************************************** -->
     <!-- background image -->
     background-repeat,background-size,background-attachment,background-position
     <div id="image">
@@ -272,8 +320,25 @@
             totam porro, excepturi repellat inventore!</p>
     </div>
 
+    <!-- cursor -->
+    1.default- Standard arrow pointer
+    2.pointer- Hand pointer (used for links/buttons)
+    3.text- I-beam (used for text selection)
+    4.wait- Hourglass / spinner (waiting)
+    5.help- Question mark or help cursor
+    6.move- Four-way arrow (dragging/moving)
+    7.crosshair- Crosshair (precise selection)
+    8.not-allowed- Circle with a line (action not allowed)
+    9.no-drop- Cursor indicating dropping is not allowed
+    10.grab- Open hand (element can be grabbed)
+    11.grabbing- Closed hand (element is being grabbed)
 
-    <!-- day 4 -->
+    🔹 Resizing cursors
+    Cursor Value Description
+    col-resize Horizontal resize (↔)
+    row-resize
+
+    <!-- ****************************************************day 4**************************************************** -->
     <!-- position -->
     static-we cant able to move items in any position,
     relative-Relative positioning moves an element RELATIVE to its original position.,
@@ -342,7 +407,8 @@
         <div style="background-color: blueviolet;flex-grow: 1">day4</div>
     </div>
     <br>
-    <!-- day 5 -->
+
+    <!-- ****************************************************day 5 ****************************************************-->
     <!-- grid -->
     <!-- grid-template-columns: repeat(2,1fr) -->
 
@@ -356,16 +422,78 @@
         <div class="item7">7</div>
     </div>
 
-    <!-- transition-timing function -->
+    <!-- transition propertis -->
     1.transition-duration,
     2.transition-delay,
     3.transition-timing-function
     4.transition-property
+    <!-- transition: <property> <duration> <timing-function> <delay>; -->
 
-    <!-- 1.transition-duration, -->
+    <!-- 1.transition-timing function, -->
     1.linear, 2.ease-slow:fast:slow 3.ease in :slow-fast 4.ease out:fast-slwo 5.ease-in-out :slow-fast-slow
 
-<div class="transition"></div>
+    <div class="transition"></div>
+
+    <!-- transform -->
+    1.translate,2.rotate, 3.skew ,4.scale
+
+    <!-- translate -->
+    syntax: transfrom:translate(x-axis,y-axis)
+    <!-- translate 3d -->
+    transform:perspective(size)translate3d(size,size,siez)
+
+    <!-- rotate -->
+    transform:rotate(deg)
+    transform:rotatex(deg)
+    transform:rotatey(deg)
+    transform:rotate3d(deg)
+
+    <!-- skew -->
+    transfor:skew(xaxis_deg,yaxis_deg)
+
+    <!-- scale --> like zooming
+    transform:scale(numeric value)
+    above 1 - zoom in, below 1- zoom out
+
+    <!-- Animation -->
+    syntax 1:
+    @keyframe name{
+    from{}
+    to{}
+    }
+    syntax 2:
+    @keyframe name{
+    0%{}
+    50%{}
+    100%{}
+    }
+    properties
+    animation-color,
+    animation-duration,
+    animation-delay,
+    animation-iteration-count,
+    animation-direction: normal,reverse,alternative,
+    animation-delay
+    <br>
+    <div class="animation" data-aos="fade-right">
+        <!-- /* shorthand: animation-name | duration | timing-function | iteration-count | delay | direction */ -->
+
+    </div>
+    <!-- root variables -->
+    syntax:
+    :root{
+    --name:property;
+    }cd
+    calling:
+    h1 {color or background-color: var(--name)}
+    <!-- AOS -->
+    1. css and script cdn link,2.copy paste code
+    <!-- <script>
+        AOS.init();
+    </script> -->
 </body>
+<script>
+    AOS.init();
+</script>
 
 </html>
