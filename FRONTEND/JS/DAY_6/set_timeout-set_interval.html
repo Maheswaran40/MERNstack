@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval & Timeout</title>
+</head>
+<body>
+
+    <h1 id="tag"></h1>
+
+    <script>
+
+        // setTimeout(function , time)
+
+        let timer = setTimeout(() =>{
+            console.log("Hello")
+        } , 3000)
+
+        clearTimeout(timer)
+
+        // setTimeout(() => {
+        //     document.getElementById("tag").innerHTML = "Set Time out"
+        // }, 2000)
+
+        // setInterval(()=>{
+        //     console.log("Hello")
+        // }, 2000)
+
+        var num = 0;
+
+        setInterval(() => {
+            ++num;
+            if(num <= 100){
+                document.getElementById("tag").innerHTML = num;
+            }
+        }, 10)
+
+    </script>
+    
+</body>
+</html>

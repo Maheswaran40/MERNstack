@@ -1,0 +1,21 @@
+CSS SYLLABUS
+
+CSS (Cascading Style Sheet)
+
+DAY - 1 => Introduction, Types of CSS, Pseudo Selectors, Colors, Background Colors
+DAY - 2 => Combinators, Margin, Padding, Border, Text Properties, Text-shadow, Box-shadow
+DAY - 3 => Background Image, Flex, Float
+DAY - 4 => Position, Z-Index, Over Flow, Opacity
+DAY - 5 => Grid, Transform, Transition
+DAY - 6 => Animations, Root Variable, AOS Animation
+DAY - 7 => Media Query
+
+PROJECT - http://medicio-ard.netlify.app/
+
+element
+universal - *
+Pseudo - before , after , hover , focus , placeholder
+id
+class
+
+Position - sticky, fixed, relative, static, absolute

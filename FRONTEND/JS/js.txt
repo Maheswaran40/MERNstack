@@ -1,0 +1,16 @@
+JavaScript Syllabus
+
+Day - 1 => Types of JS, Outputs, Variables, Comments,  Data Types
+Day - 2 => String Methods, Number Methods
+Day - 3 => Operators,  DOM
+Day - 4 => Functions & It's Methods, JSON
+Day - 5 => Conditional Statements
+Day - 6 => Try Catch, Set Interval, Set Timeout
+Day - 7 => Loops
+Day - 8 => Array & It's Methods  
+Day - 9 => Array & It's Methods  
+Day - 10 => Object & It's Methods, Fetching Data From API
+Day - 11 => Event, Event Listener
+Day - 12 => Form Validation, Password Validation
+
+PROJECT - E COMMERCE with Add to Cart and Wishlist Functionality
